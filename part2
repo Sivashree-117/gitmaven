@@ -1,0 +1,157 @@
+1. Employee Salary Calculation (with bonus & tax)
+public class EmployeeSalary {
+    public static void main(String[] args) {
+        double basic = 30000;
+        double bonus = 5000;
+
+        double gross = basic + bonus;
+        double tax = gross * 0.1;
+        double net = gross - tax;
+
+        System.out.println("Gross Salary = " + gross);
+        System.out.println("Tax = " + tax);
+        System.out.println("Net Salary = " + net);
+    }
+}
+✅ 2. Electricity Bill Calculation
+public class ElectricityBill {
+    public static void main(String[] args) {
+        int units = 250;
+        double bill;
+
+        if (units <= 100)
+            bill = units * 1.5;
+        else if (units <= 200)
+            bill = units * 2;
+        else
+            bill = units * 3;
+
+        System.out.println("Electricity Bill = " + bill);
+    }
+}
+✅ 3. Simple Interest & Total Amount
+public class SimpleInterest {
+    public static void main(String[] args) {
+        double p = 10000, r = 5, t = 2;
+
+        double si = (p * r * t) / 100;
+        double total = p + si;
+
+        System.out.println("Simple Interest = " + si);
+        System.out.println("Total Amount = " + total);
+    }
+}
+✅ 4. Bank Account Balance Check
+public class BankAccount {
+    public static void main(String[] args) {
+        double balance = 2000;
+        double withdraw = 2500;
+
+        if (withdraw <= balance) {
+            balance -= withdraw;
+            System.out.println("Transaction Successful");
+        } else {
+            System.out.println("Insufficient Balance");
+        }
+
+        System.out.println("Remaining Balance = " + balance);
+    }
+}
+✅ 5. Discount Calculation for Shopping
+public class Discount {
+    public static void main(String[] args) {
+        double amount = 1200;
+        double discount;
+
+        if (amount > 1000)
+            discount = amount * 0.2;
+        else
+            discount = amount * 0.1;
+
+        double finalAmount = amount - discount;
+
+        System.out.println("Discount = " + discount);
+        System.out.println("Final Amount = " + finalAmount);
+    }
+}
+✅ 6. Voting Eligibility Check
+public class Voting {
+    public static void main(String[] args) {
+        int age = 17;
+
+        if (age >= 18)
+            System.out.println("Eligible to Vote");
+        else
+            System.out.println("Not Eligible");
+    }
+}
+✅ 7. Login System (Username & Password)
+public class Login {
+    public static void main(String[] args) {
+        String username = "admin";
+        String password = "1234";
+
+        if (username.equals("admin") && password.equals("1234"))
+            System.out.println("Login Successful");
+        else
+            System.out.println("Invalid Credentials");
+    }
+}
+✅ 8. ATM Withdrawal with Minimum Balance
+public class ATM {
+    public static void main(String[] args) {
+        double balance = 5000;
+        double withdraw = 3000;
+
+        if (balance - withdraw >= 1000) {
+            balance -= withdraw;
+            System.out.println("Withdraw Successful");
+        } else {
+            System.out.println("Minimum balance required");
+        }
+
+        System.out.println("Balance = " + balance);
+    }
+}
+✅ 9. Movie Ticket Price Based on Age
+public class Ticket {
+    public static void main(String[] args) {
+        int age = 10;
+        double price;
+
+        if (age < 12)
+            price = 100;
+        else if (age <= 60)
+            price = 150;
+        else
+            price = 120;
+
+        System.out.println("Ticket Price = " + price);
+    }
+}
+✅ 10. Grade System for Multiple Subjects (Different Logic)
+public class ResultStatus {
+    public static void main(String[] args) {
+        int[] marks = {50, 60, 30, 80, 90};
+        boolean fail = false;
+
+        for (int m : marks) {
+            if (m < 40) {
+                fail = true;
+                break;
+            }
+        }
+
+        if (fail)
+            System.out.println("Result = FAIL");
+        else
+            System.out.println("Result = PASS");
+    }
+}
+🔥 How to identify these in interview
+
+If they give:
+
+marks → average + grade
+money → tax / discount
+units → slab calculation
