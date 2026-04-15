@@ -155,3 +155,139 @@ If they give:
 marks → average + grade
 money → tax / discount
 units → slab calculation
+
+
+
+1. Student Grade Calculator
+📌 Logic
+Take 5 subject marks
+Calculate total & average
+Assign grade
+Check pass/fail
+💻 Code
+public class StudentGradeCalculator {
+    public static void main(String[] args) {
+
+        int m1 = 80, m2 = 75, m3 = 90, m4 = 85, m5 = 70;
+
+        int total = m1 + m2 + m3 + m4 + m5;
+        double avg = total / 5.0;
+
+        char grade;
+        if (avg >= 90) grade = 'A';
+        else if (avg >= 75) grade = 'B';
+        else if (avg >= 60) grade = 'C';
+        else grade = 'F';
+
+        boolean pass = (m1 >= 40 && m2 >= 40 && m3 >= 40 && m4 >= 40 && m5 >= 40);
+
+        System.out.println("Total = " + total);
+        System.out.println("Average = " + avg);
+        System.out.println("Grade = " + grade);
+        System.out.println("Result = " + (pass ? "PASS" : "FAIL"));
+    }
+}
+✅ 2. Bank Account Management System
+📌 Logic
+Deposit → add money
+Withdraw → check balance
+Show final balance
+💻 Code
+public class BankSystem {
+    public static void main(String[] args) {
+
+        double balance = 5000;
+
+        double deposit = 2000;
+        balance += deposit;
+        System.out.println("After Deposit = " + balance);
+
+        double withdraw = 6000;
+
+        if (withdraw <= balance) {
+            balance -= withdraw;
+            System.out.println("Withdrawal Successful");
+        } else {
+            System.out.println("Insufficient Balance");
+        }
+
+        System.out.println("Final Balance = " + balance);
+    }
+}
+✅ 3. Employee Salary Calculator
+📌 Logic
+HRA = 20% of basic
+DA = 10% of basic
+Gross = basic + HRA + DA
+💻 Code
+public class EmployeeSalary {
+    public static void main(String[] args) {
+
+        double basic = 30000;
+
+        double hra = basic * 0.20;
+        double da = basic * 0.10;
+
+        double gross = basic + hra + da;
+
+        System.out.println("Basic = " + basic);
+        System.out.println("HRA = " + hra);
+        System.out.println("DA = " + da);
+        System.out.println("Gross Salary = " + gross);
+    }
+}
+✅ 4. Library Book Management System
+📌 Logic
+Check if book is available
+Issue book → mark unavailable
+Return book → mark available
+💻 Code
+public class LibrarySystem {
+    public static void main(String[] args) {
+
+        boolean bookAvailable = true;
+
+        // Issue book
+        if (bookAvailable) {
+            System.out.println("Book Issued");
+            bookAvailable = false;
+        } else {
+            System.out.println("Book Not Available");
+        }
+
+        // Return book
+        bookAvailable = true;
+        System.out.println("Book Returned");
+
+        // Status
+        System.out.println("Available Now: " + bookAvailable);
+    }
+}
+✅ 5. Simple Calculator Application
+📌 Logic
+Perform +, -, *, / using operator
+💻 Code
+public class Calculator {
+    public static void main(String[] args) {
+
+        int a = 10, b = 5;
+        char op = '+';  // change operator
+
+        switch (op) {
+            case '+':
+                System.out.println("Result = " + (a + b));
+                break;
+            case '-':
+                System.out.println("Result = " + (a - b));
+                break;
+            case '*':
+                System.out.println("Result = " + (a * b));
+                break;
+            case '/':
+                System.out.println("Result = " + (a / b));
+                break;
+            default:
+                System.out.println("Invalid Operator");
+        }
+    }
+}
