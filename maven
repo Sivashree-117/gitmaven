@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'M3'
+    }
+
+    stages {
+        stage('Checkout Git') {
+            steps {
+                git branch: 'main',
+                url: 'YOUR_REPO_LINK'
+            }
+        }
+
+        stage('Build and Test') {
+            steps {
+                bat 'mvn clean test'
+            }
+        }
+    }
+}
