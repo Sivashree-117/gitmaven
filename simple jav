@@ -129,3 +129,59 @@ public class Vowels {
         System.out.println("Vowel count = " + count);
     }
 }
+
+
+
+
+marksssssssss
+
+import java.util.Scanner;
+
+public class StudentMarks {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Input 5 subject marks
+        System.out.println("Enter marks for 5 subjects:");
+        int m1 = sc.nextInt();
+        int m2 = sc.nextInt();
+        int m3 = sc.nextInt();
+        int m4 = sc.nextInt();
+        int m5 = sc.nextInt();
+
+        // Total
+        int total = m1 + m2 + m3 + m4 + m5;
+
+        // Average
+        double average = total / 5.0;
+
+        // Pass/Fail (assume pass mark = 40)
+        boolean pass = (m1 >= 40 && m2 >= 40 && m3 >= 40 && m4 >= 40 && m5 >= 40);
+
+        // Grade
+        char grade;
+        if (average >= 90)
+            grade = 'A';
+        else if (average >= 75)
+            grade = 'B';
+        else if (average >= 60)
+            grade = 'C';
+        else if (average >= 50)
+            grade = 'D';
+        else
+            grade = 'F';
+
+        // Output
+        System.out.println("Total = " + total);
+        System.out.println("Average = " + average);
+        System.out.println("Grade = " + grade);
+
+        if (pass)
+            System.out.println("Result = PASS");
+        else
+            System.out.println("Result = FAIL");
+
+        sc.close();
+    }
+}
