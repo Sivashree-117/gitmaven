@@ -1,0 +1,131 @@
+1. Hello World Program
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Jenkins and Git!");
+    }
+}
+2. Sum of Two Numbers
+public class Sum {
+    public static void main(String[] args) {
+        int a = 10, b = 20;
+        int sum = a + b;
+        System.out.println("Sum = " + sum);
+    }
+}
+3. Even or Odd
+public class EvenOdd {
+    public static void main(String[] args) {
+        int num = 7;
+
+        if (num % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+4. Factorial Program
+public class Factorial {
+    public static void main(String[] args) {
+        int num = 5;
+        int fact = 1;
+
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+        }
+
+        System.out.println("Factorial = " + fact);
+    }
+}
+5. Prime Number Check
+public class Prime {
+    public static void main(String[] args) {
+        int num = 11;
+        boolean isPrime = true;
+
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+            System.out.println("Prime");
+        else
+            System.out.println("Not Prime");
+    }
+}
+6. Reverse a String
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Jenkins";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        System.out.println("Reversed: " + rev);
+    }
+}
+7. Palindrome String
+public class Palindrome {
+    public static void main(String[] args) {
+        String str = "madam";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        if (str.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+8. Fibonacci Series
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10, a = 0, b = 1;
+
+        System.out.print(a + " " + b);
+
+        for (int i = 2; i < n; i++) {
+            int c = a + b;
+            System.out.print(" " + c);
+            a = b;
+            b = c;
+        }
+    }
+}
+9. Largest Number in Array
+public class Largest {
+    public static void main(String[] args) {
+        int[] arr = {10, 25, 5, 40, 15};
+        int max = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+
+        System.out.println("Largest = " + max);
+    }
+}
+10. Count Vowels in String
+public class Vowels {
+    public static void main(String[] args) {
+        String str = "hello world";
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = Character.toLowerCase(str.charAt(i));
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+
+        System.out.println("Vowel count = " + count);
+    }
+}
